@@ -13,6 +13,8 @@ import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import { CiMenuBurger, CiInstagram } from "react-icons/ci";
 import { FaYoutube, FaTiktok } from "react-icons/fa";
+import Link from "next/link";
+import DarkModeToggle from "./DarkModeToggle";
 
 const DrawerComponent = () => {
   const [state, setState] = useState({
@@ -37,6 +39,7 @@ const DrawerComponent = () => {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
+      <div className="">
       <List>
         {[
           "Home",
@@ -65,11 +68,13 @@ const DrawerComponent = () => {
         {/* {['Log in', 'Trash', 'Spam'].map((text, index) => ( */}
         <ListItem key="Log in" disablePadding>
           <ListItemButton>
+       
             {/* <ListItemIcon> */}
             {/* {index % 2 === 0 ? */}
             <div className="flex flex-col w-full pl-3 ">
                 <div className="flex w-full justify-start ">
-              <button>Log in</button>
+                  <Link href="/Login">
+              <button>Log in</button></Link>
 </div>
               <div className="flex w-full justify-evenly gap-x-8 pt-8">
                 <FaTiktok size={30}/>
@@ -84,6 +89,7 @@ const DrawerComponent = () => {
         </ListItem>
         {/* ))} */}
       </List>
+      </div>
     </Box>
   );
 
@@ -92,7 +98,7 @@ const DrawerComponent = () => {
       {["Draw"].map((anchor) => (
         <React.Fragment key={anchor}>
           <Button onClick={toggleDrawer(anchor, true)}>
-          <CiMenuBurger color="white" size={30}/>
+          <CiMenuBurger color="black" size={30}/>
           </Button>
           <Drawer
             anchor={anchor}

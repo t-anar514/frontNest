@@ -11,8 +11,8 @@ export default function Footer(){
     
     const [selectedOption, setSelectedOption] = useState(options[0]);
     return(
-        <div className="w-screen">
-        <div className="w-full grid lg:grid-cols-4 grid-cols-1  bg-slate-400 pl-12 py-16" >
+        <div className="w-screen bg-white">
+        <div className="w-full grid lg:grid-cols-4 grid-cols-1  pl-12 py-16" >
     <div className="flex flex-col gap-y-4 text-black items-start">
         <button className="">Search</button>
         <button className="">Refund Policy</button>
@@ -49,10 +49,10 @@ export default function Footer(){
   selectedOption={selectedOption}
   onSelect={setSelectedOption}
 /></div>
-<div className="h-8 w-full bg-slate-400">
+<div className="h-8 w-full ">
 {/* ene deer tolboriin barimtuuud orno */}
 </div>
-<div className="w-full flex justify-center pt-6 pb-12">
+<div className="w-full flex justify-center pt-6 pb-12 text-black">
 <p>
     @ 2023 Grailed Locker
 </p></div>
