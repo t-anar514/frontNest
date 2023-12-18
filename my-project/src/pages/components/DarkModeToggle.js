@@ -14,7 +14,7 @@ export default function DarkModeToggle() {
     };
   
     return (
-      <button onClick={toggleDarkMode} className="p-2 bg-white dark:bg-black rounded font-bold text-black dark:text-white">
+      <button onClick={toggleDarkMode} className="p-2 bg-white dark:bg-black rounded  text-black dark:text-white">
         {darkMode ? 'Light Mode' : 'Dark Mode'} 
       </button>
     );

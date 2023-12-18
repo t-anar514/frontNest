@@ -34,7 +34,7 @@ export default function Homepage() {
 
     return (
         <div className="w-full ">
-            <div className="bg-black w-full mt-8 flex justify-center">
+            <div className="bg-black w-full  flex justify-center">
                 <p className="text-base p-3">
                     <span className="font-bold">Free Shipping </span> Orders 35+
                 </p>
