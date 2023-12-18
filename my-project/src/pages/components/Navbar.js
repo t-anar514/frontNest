@@ -46,7 +46,9 @@ export default function Navbar(){
 <div className="flex w-full  justify-between">
 <Drawer/>
 <div className="w-60 h-full bg-white flex justify-center items-center">
+  <Link href='/'> 
   <img src="https://grailedlocker.us/cdn/shop/files/CEED7BCF-254D-4C79-9C43-67FEF46B37F3.jpg?v=1698373314&width=340"/>
+  </Link>
 </div>
 <div className="w-60 h-full flex items-center justify-evenly">
   {isDesktopOrLaptop && 
