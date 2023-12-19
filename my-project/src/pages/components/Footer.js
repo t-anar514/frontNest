@@ -11,9 +11,9 @@ export default function Footer(){
     
     const [selectedOption, setSelectedOption] = useState(options[0]);
     return(
-        <div className="w-screen bg-white">
+        <div className="w-screen bg-white dark:bg-black">
         <div className="w-full grid lg:grid-cols-4 grid-cols-1  pl-12 py-16" >
-    <div className="flex flex-col gap-y-4 text-black items-start">
+    <div className="flex flex-col gap-y-4 text-black dark:text-white items-start">
         <button className="">Search</button>
         <button className="">Refund Policy</button>
         <button className="">Shipping Policy</button>
@@ -21,13 +21,13 @@ export default function Footer(){
         <button className="">Pricavy Policy</button>
         <button className="">Terms of Service</button>
     </div>
-    <div className="flex flex-col items-start gap-y-4 text-black">
+    <div className="flex flex-col items-start gap-y-4 text-black  dark:text-white">
         <p className="text-2xl">Sign up and Save</p>
         <p> Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
         <div>
-        <div className="relative text-black ">
+        <div className="relative text-black  dark:text-white">
         <input
-          className="py-2  px-4  border-b-2 border-black focus:outline-non focus:border-blue-500"
+          className="py-2  px-4  border-b-2 border-black dark:border-white focus:outline-non focus:border-blue-500"
           type="email"
           placeholder="Enter your email"
         />

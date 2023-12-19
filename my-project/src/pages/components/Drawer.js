@@ -39,7 +39,7 @@ const DrawerComponent = () => {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <div className="">
+      <div className="dark:bg-black dark:text-white">
       <List>
         {[
           "Home",
@@ -98,7 +98,7 @@ const DrawerComponent = () => {
       {["Draw"].map((anchor) => (
         <React.Fragment key={anchor}>
           <Button onClick={toggleDrawer(anchor, true)}>
-          <CiMenuBurger color="black" size={30}/>
+          <CiMenuBurger className="text-black dark:text-white" size={30}/>
           </Button>
           <Drawer
             anchor={anchor}

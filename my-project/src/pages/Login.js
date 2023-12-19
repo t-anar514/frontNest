@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Login(){
     return(
         <div className="flex justify-center items-center h-screen bg-white">
-            <div className="max-w-md w-full h-full lg:pt-16 p-8">
+            <div className="max-w-md w-full h-full pt-64 p-8">
                 <h2 className="text-4xl d text-center text-black mb-8">LOGIN </h2>
                 <form>
                     <div className="mb-4 pt-8">
@@ -26,7 +26,7 @@ export default function Login(){
                    
                     <div className="flex items-center w-full pt-4 justify-between">
                         <button className="bg-black hover:bg-slate-900 text-white py-3 px-4 w-full  focus:outline-none focus:shadow-outline" type="submit">
-                            S i g n  &nbsp; I n
+                             S i g n  &nbsp; I n
                         </button>
                       
                     </div>

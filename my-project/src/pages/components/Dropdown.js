@@ -15,7 +15,7 @@ const Dropdown = ({ options, selectedOption, onSelect }) => {
       <div>
         <button
           type="button"
-          className="inline-flex items-center justify-center w-full  px-4 text-sm  text-black"
+          className="inline-flex items-center justify-center w-full  px-4 text-sm  text-black dark:text-white"
           id="options-menu"
           aria-haspopup="true"
           aria-expanded="true"

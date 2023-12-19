@@ -34,13 +34,13 @@ export default function Homepage() {
 
     return (
         <div className="w-full ">
-            <div className="bg-black w-full  flex justify-center">
-                <p className="text-base p-3">
+            <div className="bg-black dark:bg-white   w-full  flex justify-center">
+                <p className="text-base p-3 text-white dark:text-black">
                     <span className="font-bold">Free Shipping </span> Orders 35+
                 </p>
             </div>
-            <div className="w-full flex justify-center mt-36">
-                <p className="text-3xl text-black">JUST DROPPED</p>
+            <div className="w-full flex justify-center pt-36 dark:bg-black">
+                <p className="text-3xl dark:text-white text-black">JUST DROPPED</p>
             </div>
             {/* <div className="flex overflow-x-auto scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100 pl-3">
         
@@ -55,7 +55,7 @@ export default function Homepage() {
                     </div>
                 ))}
             </div> */}
-                <div className={`flex pl-3  ${isTabletOrMobile ? ' overflow-x-auto scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100' : 'grid grid-cols-5'} `}>
+                <div className={`flex dark:bg-black pl-3  ${isTabletOrMobile ? ' overflow-x-auto scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100' : 'grid grid-cols-5'} `}>
                 {products.map((product) => (
                     <div key={product.id} className={`flex-none ${isTabletOrMobile ? 'w-1/2 mb-4' : 'w-full '}`}>
                         <Link href={`/products/${product.id}`} passHref>
@@ -64,10 +64,10 @@ export default function Homepage() {
                     </div>
                 ))}
             </div>
-            <div className="w-full flex justify-center mt-36">
+            <div className="w-full flex justify-center pt-36 dark:bg-black">
                 <p className="text-3xl text-black">Most Popular</p>
             </div>
-            <div className={`flex pl-3  ${isTabletOrMobile ? ' overflow-x-auto scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100' : 'grid grid-cols-5'} `}>
+            <div className={`flex pl-3 dark:bg-black  ${isTabletOrMobile ? ' overflow-x-auto scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100' : 'grid grid-cols-5'} `}>
                 {popProduct.map((product) => (
                     <div key={product.id} className={`flex-none ${isTabletOrMobile ? 'w-1/2 mb-4' : 'w-full '}`}>
                         <Link href={`/products/${product.id}`} passHref>

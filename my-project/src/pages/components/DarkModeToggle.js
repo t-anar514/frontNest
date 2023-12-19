@@ -1,22 +1,31 @@
-// components/DarkModeToggle.js
-import { useState } from "react";
+import { useEffect, useState } from 'react';
 
-export default function DarkModeToggle() {
-    const [darkMode, setDarkMode] = useState(false);
-  
-    const toggleDarkMode = () => {
-      setDarkMode(!darkMode);
-      if (!darkMode) {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
-    };
-  
-    return (
-      <button onClick={toggleDarkMode} className="p-2 bg-white dark:bg-black rounded  text-black dark:text-white">
-        {darkMode ? 'Light Mode' : 'Dark Mode'} 
-      </button>
-    );
-  }
-  
+const DarkModeToggle = () => {
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      setDarkMode(true);
+    } else {
+      setDarkMode(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    const html = window.document.documentElement;
+    const prevTheme = darkMode ? 'light' : 'dark';
+    html.classList.remove(prevTheme);
+    const nextTheme = darkMode ? 'dark' : 'light';
+    html.classList.add(nextTheme);
+
+    localStorage.setItem('theme', nextTheme);
+  }, [darkMode]);
+
+  return (
+    <button onClick={() => setDarkMode(!darkMode)} className='bg-black dark:bg-white text-white py-2 px-3 rounded dark:text-black'>
+      {darkMode ? 'Light Mode' : 'Dark mode '}
+    </button>
+  );
+};
+
+export default DarkModeToggle;
